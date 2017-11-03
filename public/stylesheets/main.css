@@ -1,0 +1,18 @@
+.thumbnail img {
+    width: 100%;
+}
+#camp-img {
+    padding: 0;
+}
+
+#delete-form {
+    display: inline;
+}
+
+.caption-full {
+ padding: 10px;   
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
