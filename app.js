@@ -2,7 +2,6 @@ var express        = require("express"),
     flash          = require("connect-flash"),
     bodyParser     = require("body-parser"),
     mongoose       = require("mongoose"),
-    seedDB         = require("./seeds"),
     passport       = require("passport"),
     LocalStrategy  = require("passport-local"),
     methodOverride = require("method-override"),
@@ -15,7 +14,7 @@ var commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index");
     
 
-var url = process.env.DATABASEURL; 
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12";
 // var url = process.env.DATABASEURL || "mongodb://opposition:yelpcamp@ds243335.mlab.com:43335/opp_yelpcamp"; 
 mongoose.connect(url);
 app.use(bodyParser.urlencoded({extended: true}));
